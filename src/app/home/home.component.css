@@ -1,0 +1,42 @@
+body{
+    background-image: url("https://media3.giphy.com/media/TxVVB6PfWMjE4/giphy.gif")
+}
+
+.firstDiv{
+    text-align:center;
+    margin:0px;width:100%;
+    margin-top: 7%;
+}
+
+a{
+    color: white;
+    font-weight: bold;
+}img:hover{
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+    
+}
+
+h1{
+    font-family: 'Bungee Outline', cursive;
+    text-align: center;
+    color: white;
+    margin-top: 5%;
+    font-size: 8rem;
+
+}
+
+@-webkit-keyframes rotating {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+.rotating {
+    -webkit-animation: rotating 6s linear infinite;
+}.rotating:hover{
+    -webkit-animation: rotating 8s linear infinite;
+    }
