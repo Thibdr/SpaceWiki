@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  isVisible:boolean = true;
+
   constructor() { }
 
   ngOnInit() {
+    
   }
-
+  
+  playSaber(){
+    var audio = document.getElementsByTagName("audio")[0];
+    audio.play();
+  }
+  isNotVisible(){
+    this.isVisible = false;
+  }
 }
