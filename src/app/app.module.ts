@@ -9,6 +9,7 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AccueilComponent } from './accueil/accueil.component';
+import { DemoComponent } from './demo/demo.component';
 
 
 @NgModule({
@@ -17,13 +18,14 @@ import { AccueilComponent } from './accueil/accueil.component';
     HomeComponent,
     ContactComponent,
     AboutUsComponent,
-    LegalInformationComponent
+    LegalInformationComponent,
+    AccueilComponent,
+    DemoComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    AccueilComponent,
      RouterModule.forRoot(
       [
         {
@@ -34,6 +36,26 @@ import { AccueilComponent } from './accueil/accueil.component';
         {
           path: "home",
           component: HomeComponent,
+          pathMatch: "full"
+        },
+        {
+          path: "contact",
+          component: ContactComponent,
+          pathMatch: "full"
+        },
+        {
+          path: "legalInf",
+          component: LegalInformationComponent,
+          pathMatch: "full"
+        },
+        {
+          path: "aboutUs",
+          component: AboutUsComponent,
+          pathMatch: "full"
+        },
+        {
+          path: "demo",
+          component: DemoComponent,
           pathMatch: "full"
         }
       ]
