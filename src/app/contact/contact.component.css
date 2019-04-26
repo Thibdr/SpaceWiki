@@ -26,10 +26,10 @@ label {
     background-color:black;
 }
 
-
-/*.row{
-    max-width: 100%;
-    max-height: 100%;
-}*/
+.centerButton{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
 
 

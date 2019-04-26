@@ -2,3 +2,9 @@ div{
     color:white;
     font-size: 1rem;
 }
+
+.centerButton{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
