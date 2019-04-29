@@ -6,3 +6,15 @@ div{
     justify-content: center;
     margin-top: 5%;
 }
+h2{
+    font-family: 'Bungee Outline', cursive;
+    text-align: center;
+    color: white;
+    margin-top: 5%;
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+p{
+    font-size: 1.2rem;
+}
