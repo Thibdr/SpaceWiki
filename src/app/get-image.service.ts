@@ -9,26 +9,30 @@ import { map } from 'rxjs/operators';
 export class GetImageService {
 
   private myService : HttpClient;
+  
   constructor(param_http: HttpClient) {
     this.myService = param_http;
    }
-  
+
+  private random: number = 0;
+  public randomize():void{
+    this.random = Math.floor(Math.random() * 50);
+  }
+
   public getImage(param:string): Observable<string[]>{
     // observable gérant le flux de données de la NASA ( çàd, le fait de l'obtenir, de gérer les éventuelles erreurs et si l'on en a besoin, le fait d'avoirt terminé le chargement )
-    const obs:Observable<any> = this.myService.get("https://images-api.nasa.gov/search?q=" + param + "&media_type=image");
-
+    const obs:Observable<any> = this.myService.get("https://images-api.nasa.gov/search?q=" + param );
     // fonction qui permet de transformer les données reçues depuis l'API de la NASA
     const treatment =  (param_data: any) => {
-
-
       let collection: any = param_data.collection;
       let items: any[] = collection.items;
       let results: string[] = [];
       let current = null;
-      for (let i: number = 0; i < items.length; i++) {
-        current = items[i];
+      for (let i: number = 0; i < 1; i++) {
+        current = items[this.random]; 
         if (current.links.length > 0) {
           results.push(current.links[0].href);
+          // .push(current.data[0].description);
         }
       }
       return results;
@@ -38,5 +42,22 @@ export class GetImageService {
     // le résultat de tout ceci, nous donne un nouvel observable contenant uniquement les données filtrées / traitées qui nous intéressent.
     return obs.pipe( map(treatment)  );
   }
-}
 
+  public getDescription(param:string): Observable<string[]>{
+    const obs:Observable<any> = this.myService.get("https://images-api.nasa.gov/search?q=" + param );
+    const treatment =  (param_data: any) => {
+      let collection: any = param_data.collection;
+      let items: any = collection.items;
+      let results: string[] = [];
+      let current = null;
+      for (let i: number = 0; i < 1; i++) {
+        current = items[this.random];
+        if (current.links.length > 0) {
+          results.push(current.data[0].description);
+        }
+      }
+      return results;
+    };
+      return obs.pipe(map(treatment));
+  }
+}

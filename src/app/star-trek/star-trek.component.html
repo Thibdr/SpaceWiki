@@ -1,0 +1,19 @@
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Bungee+Outline" rel="stylesheet">
+</head>
+<div *ngIf="isVisible">
+  <video autoplay (ended)="isNotVisible()">
+    <source src="../../assets/video/hyperspace.mp4">
+  </video>
+</div>
+<h2 class="uno">Mars trek :</h2>
+<iframe src="https://trek.nasa.gov/mars/index.html" width="70%" height="500" class="un"></iframe>
+<h2 class="dos">Moon trek :</h2>
+<iframe src="https://moontrek.jpl.nasa.gov/" width="70%" height="500" class="deux"></iframe>
+<h2 class="tres">Vesta trek :</h2>
+<h2 class="vestInfo">(Vesta is one of the largest objects in the asteroid belt, with a mean diameter of 525 kilometres.)
+</h2>
+<iframe src="https://trek.nasa.gov/vesta/index.html" width="70%" height="500" class="trois"></iframe>
+<div class="centerButton">
+  <button type="button" routerLink="/home" class="btn btn-warning">Home</button>
+</div>
