@@ -1,8 +1,29 @@
 div{
     color: white;
 }
+
+h2{
+    font-family: 'Bungee Outline', cursive;
+    text-align: center;
+    color: white;
+    margin-top: 4%;
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+p{
+    font-size: 1.3rem;
+}
+
+.info{
+    padding: 2%
+}
+
+
 .centerButton{
     display: flex;
     justify-content: center;
-    margin-top: 5%;
+    margin-top: 2%;
+    padding-bottom: 5%;
+    font-size: 1.3rem;
 }

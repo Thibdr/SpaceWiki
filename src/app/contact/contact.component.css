@@ -1,11 +1,26 @@
-h1{
+h2{
+    font-family: 'Bungee Outline', cursive;
+    text-align: center;
     color: white;
+    margin-top: 5%;
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+.title{
+    margin-top: 4%;
+}
+
+.forms{
+    margin-top: 8%;
 }
 
 label {
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
+
+
 
 .warning{
     color: red;
@@ -30,6 +45,6 @@ label {
     display: flex;
     justify-content: center;
     margin-top: 5%;
+    padding-bottom: 5%;
 }
-
 
