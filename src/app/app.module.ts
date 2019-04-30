@@ -9,7 +9,7 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AccueilComponent } from './accueil/accueil.component';
-import { DemoComponent } from './demo/demo.component';
+import { StarTrekComponent } from './star-trek/star-trek.component';
 
 
 @NgModule({
@@ -20,7 +20,7 @@ import { DemoComponent } from './demo/demo.component';
     AboutUsComponent,
     LegalInformationComponent,
     AccueilComponent,
-    DemoComponent,
+    StarTrekComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,8 +54,8 @@ import { DemoComponent } from './demo/demo.component';
           pathMatch: "full"
         },
         {
-          path: "demo",
-          component: DemoComponent,
+          path: "starTrek",
+          component: StarTrekComponent,
           pathMatch: "full"
         }
       ]
