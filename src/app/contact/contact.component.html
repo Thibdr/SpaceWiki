@@ -1,0 +1,109 @@
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Bungee+Outline" rel="stylesheet">
+</head>
+
+<div class="title text-center">
+  <!--Titre de la page-->
+  <h2>Contact us</h2>
+</div>
+
+<div class="container-fluid ">
+  <!--les 2 parties du formulaire-->
+  <form (ngSubmit)="contactForm.valid && onSubmit()" #contactForm="ngForm">
+    <div class="container-fluid forms">
+      <!--affiche les 2 parties sur une ligne sur grand écran-->
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 justify-content-between">
+          <!--1er formulaire à gauche -->
+          <div class="container firstForm  p-5">
+            <!--firstName-->
+            <div class="label">
+              <label class="col-12 text-center" for="firstName">First Name</label>
+              <input class="col-12" type="text" name="firstName" [(ngModel)]="model.firstName" #firstName="ngModel" required
+                minlength="3" maxlength="20">
+            </div>
+            <!--firstName errors-->
+            <div *ngIf="firstName.errors && contactForm.submitted">
+              <span *ngIf="firstName.errors.required" class="warning">Input Required !</span>
+              <span *ngIf="firstName.errors.minlength" class="warning">Minimum 3 characters</span>
+              <span *ngIf="firstName.errors.maxlength" class="warning">Maximum 20 characters</span>
+            </div>
+            <!--------------------------------------------------------------------------------------------------------------------------------------->
+            <!--lastName-->
+            <div class="label">
+              <label class="col-12 text-center" for="lastName">Last Name</label>
+              <input class="col-12" type="text" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" required
+                maxlength="20">
+            </div>
+            <!--lastName errors-->
+            <div *ngIf="lastName.errors && contactForm.submitted">
+              <span *ngIf="lastName.errors.required" class="warning">Input Required !</span>
+              <span *ngIf="lastName.errors.maxlength" class="warning">Maximum 20 characters</span>
+            </div>
+            <!--------------------------------------------------------------------------------------------------------------------------------------->
+            <!--mail-->
+            <div class="label">
+              <label class="col-12 text-center" for="mail" > Your Email</label>
+              <input class="col-12" type="email" name="mail" [(ngModel)]="model.mail" #mail="ngModel" required email>
+            </div>
+            <!--mail errors-->
+            <div *ngIf="mail.errors && contactForm.submitted">
+              <span *ngIf="mail.errors.required" class="warning">Input Required !</span>
+              <span *ngIf="mail.errors.email" class="warning">Verify your Email ! </span>
+            </div>
+            <!--------------------------------------------------------------------------------------------------------------------------------------->
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 justify-content-between">
+          <!--2ème formulaire à droite-->
+          <div class="container secondForm p-5">
+            <!--country-->
+            <div class="label">
+              <label class="col-12 text-center" for="country"> Your Country</label>
+              <input class="col-12" type="text" name="country" [(ngModel)]="model.country" #country="ngModel" required minlength="5">
+            </div>
+            <!--country errors-->
+            <div *ngIf="country.errors && contactForm.submitted">
+              <span *ngIf="country.errors.required" class="warning">Input Required ! </span>
+              <span *ngIf="country.errors.minlength" class="warning">Minimum 5 characters</span>
+            </div>
+            <!--------------------------------------------------------------------------------------------------------------------------------------->
+            <!--message-->
+            <div class="label">
+              <label class="col-12 text-center" for="message">Message :</label>
+              <textarea class="col-12" name="message" id="textarea" rows="5"></textarea>
+            </div>
+          </div>
+          <!--------------------------------------------------------------------------------------------------------------------------------------->
+        </div>
+        <!--ferme la row1-->
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <!--les boutons de bas de formulaire-->
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 p-5 d-flex justify-content-center">
+          <!--newsletter-->
+          <div class=" newsletter custom-control form-control-lg custom-checkbox">
+            <input type="checkbox" class="custom-control-input check" id="customCheck1" />
+            <label class="custom-control-label checklabel" for="customCheck1">Subscribe to the Newsletter</label>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 p-5 d-flex justify-content-center">
+          <!--submit button-->
+          <div class="submitBtn ">
+            <button type="submit" class=" label btn btn-white btn-lg" (click)="onSubmit()"
+              [disabled]="!contactForm.valid">Submit</button>
+          </div>
+        </div>
+        <!-------------------------------------------------------------------------------------------------------------------------------------->
+      </div>
+    </div>
+
+  </form>
+</div>
+<div class="centerButton">
+
+    <button type="button" class="btn btn-primary" routerLink="/home">Home</button>
+</div>
+

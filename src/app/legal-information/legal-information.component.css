@@ -1,0 +1,37 @@
+div{
+    color: white;
+}
+
+h2{
+    font-family: 'Bungee Outline', cursive;
+    text-align: center;
+    color: white;
+    margin-top: 2%;
+    font-size: 4rem;
+    font-weight: bold;
+}
+@media only screen and (max-device-width: 530px) {
+    h2{
+        font-size:2rem
+    }
+    img{
+        display: none;
+    }
+}
+
+p{
+    font-size: 1.3rem;
+}
+
+.info{
+    padding: 2%
+}
+
+
+.centerButton{
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    padding-bottom: 5%;
+    font-size: 1.3rem;
+}
