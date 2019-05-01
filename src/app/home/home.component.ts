@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { GetImageService } from '../get-image.service';
-import { Alert } from 'selenium-webdriver';
 
 @Component({
   selector: 'app-home',
@@ -21,6 +20,19 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
+    if (window.screen.width < 1200) { 
+      var audioSaber = document.getElementsByTagName("audio")[0];
+      audioSaber.volume = 0;
+      var audioSong = document.getElementsByTagName("audio")[1];
+      audioSong.volume = 0;
+    }
+  }
+
+  public isDesktop(){
+    if (window.screen.width < 1200) { 
+      var intro = document.getElementsByTagName("video")[0];
+      intro.muted = true;
+    }
   }
 
   public changeImage():void{

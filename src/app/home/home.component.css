@@ -1,6 +1,6 @@
 .firstDiv{
     text-align:center;
-    margin:0px;width:100%;
+    width:100%;
     margin-top: 7%;
 }
 
@@ -28,6 +28,8 @@ h1{
 
 }
 
+/*        ROTATION PLANET                                      */
+
 @-webkit-keyframes rotating {
     from{
         -webkit-transform: rotate(0deg);
@@ -43,6 +45,9 @@ h1{
     -webkit-animation: rotating 8s linear infinite;
 
 }
+
+/*      2nd TITLE BLINK                                     */
+
 @-webkit-keyframes blinker {
     from {opacity: 1.0;}
     to {opacity: 0.0;}
@@ -54,7 +59,7 @@ h1{
       -webkit-animation-iteration-count:infinite;
       -webkit-animation-timing-function:ease-in-out;
       -webkit-animation-direction: alternate;
-      text-shadow: 1px 1px 2px red, 0 0 1em orange, 0 0 0.2em orange;
+      text-shadow: 1px 1px 2px red, 0 0 1em orangered, 0 0 0.2em orangered;
       font-size: 3rem;
       font-weight: bold;
       color: white;
@@ -67,6 +72,8 @@ h1{
     margin-top: 0px;
   }
 
+  /*      -----------------------------------------------------------  */
+
 video{ 
     position: fixed; right: 0; bottom: 0;
     min-width: 100%; min-height: 100%;
@@ -75,7 +82,7 @@ video{
     }
 
 footer{
-    box-shadow: 0px 0px 100px orange;
+    box-shadow: 0px 0px 100px orangered;
     background-color: black;
     margin-top: 15%;
 }
@@ -89,16 +96,12 @@ footer{
 p{
     color: white;
 }
-
 .marginTitleApi{
     margin-bottom: 7%;
-    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
-}.margePicApi{
-    
 }.apiDesc{
     font-size: 1.5rem;
 }.apiPic{
-    box-shadow: 0px 0px 100px orange;
+    box-shadow: 0px 0px 100px orangered;
     border-radius: 50%;
 }.searchNav{
     margin-top: 10%;
@@ -106,31 +109,148 @@ p{
     background-color: white;
 
 }.startrek{
-    opacity: 0.7;
     width: 10%;
-    box-shadow: 0px 0px 100px orange;
-    margin-left: 45%;
-    margin-bottom: 2%;
+    box-shadow: 0px 0px 100px orangered;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }.startrekTit{
 
     margin-bottom: 2%;
     font-family: 'Bungee Outline', cursive;
     font-weight: bold;
     font-size: 2rem;
-    text-shadow: 1px orange;
+    text-shadow: 1px orangered;
     text-align: center;
-    color: orange;
+    color: orangered;
 }
 
 .controlers{
     display:flex;
     margin-bottom: 5%;
-}.planetsaudio{
-    margin-right: 5%;
 }
 
 .controlTit{
-    font-family: 'Bungee Outline', cursive;
-    color: orange;
+    color: blue;
     font-weight: bold;
+}
+
+.titleApi{     
+    font-family: 'Bungee Outline', cursive;
+    font-size: 500%;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+}
+
+.mainTitle{
+    margin-top: -18%;
+}
+
+.apiSearch{
+    margin-left : 3%;
+    margin-right: 3%;
+}
+
+
+/* MEDIA QUERIES */
+
+
+@media only screen and (max-width: 1200px) {
+    .control_soundvideo{
+    display: none;
+    }
+    .mainTitle{
+        margin-top: -8%;
+    }
+}
+@media only screen and (max-width: 450px) {
+    img.startrek {
+    width: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }
+}
+@media only screen and (max-width: 770px) {
+    img.startrek {
+    width: 20%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .apiPic {
+        width: 200px;
+        height: 200px;
+    }
+}@media only screen and (min-width: 400px) and (max-width: 1400px) {
+    .apiPic {
+    width: 300px;
+    height: 300px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .apiDesc {
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .titleApi {
+        font-size: 4rem;
+    }
+    h1 {
+        font-size: 5rem;
+    }
+    .blink {
+        font-size: 1.5rem;
+        transform: none;
+        margin-left: 0%;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    iframe{
+        height: 500px;
+    }
+}
+
+@media only screen and (min-width: 421px) and (max-width: 1366px){
+    .planets{
+        width: 60px;
+        height: 60px;
+    }
+    .solar{
+        width: 175px;
+        height: 175px;
+    }
+}
+
+@media only screen and (max-width: 420px){
+    .arnaque{
+        transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        -khtml-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+    }
+    .rotating,.rotating:hover,img:hover{
+        -webkit-transform: none;
+        -webkit-animation: none;
+    }
+    .deuxieme_arnaque{
+        margin-top: 200%;
+    }
+}
+
+@media only screen and (min-width: 1366px){
+    .firstDiv{
+        margin-left: -6%;
+        margin-right: -6%;
+    }
 }

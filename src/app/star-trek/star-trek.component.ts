@@ -11,7 +11,12 @@ export class StarTrekComponent implements OnInit {
 
   ngOnInit() {
   }
-  
+  public isDesktop(){
+    if (window.screen.width < 1200) { 
+      var intro = document.getElementsByTagName("video")[0];
+      intro.muted = true;
+    }
+  }
   isNotVisible(){
     this.isVisible = false;
   }
