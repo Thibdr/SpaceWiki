@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+
+  spacewiki:
+    container_name: spacewiki
+    build: .
+    labels:
+      - traefik.enable=true
+      - traefik.backend=spacewiki
+      - traefik.frontend.rule=Host:laloupe.wilders.dev;PathPrefixStrip:/spacewiki
+      - traefik.docker.network=web
+      - traefik.port=80
+    networks:
+      - web
+
+networks:
+  web:
+    external: true
