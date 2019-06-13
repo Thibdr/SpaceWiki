@@ -14,5 +14,8 @@ model : User= new User;
 
   ngOnInit() {
   }
-
+  
+  onSubmit() {
+    alert("Sucess")
+  }
 }

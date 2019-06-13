@@ -6,7 +6,7 @@
       <div class="control_soundvideo">
       <div *ngIf="isVisible">
             <video autoplay (play)="isDesktop()" (ended)="isNotVisible()">
-                  <source src="../../assets/video/intro.mp4">
+                  <source src="./assets/video/intro.mp4">
             </video>
       </div>
       <button type="button" class="btn btn-primary" (click)="showAudioControls()">Audio control</button>
@@ -16,14 +16,14 @@
                   <div>
                         <h2 class="controlTit">Planet's audio</h2>
                         <audio controls>
-                              <source src="../../assets/audio/lasersaber.mp3" typ="audio/mpeg">
-                              <source src="../../assets/audio/lasersaber.ogg" typ="audio/ogg">
+                              <source src="./assets/audio/lasersaber.mp3" typ="audio/mpeg">
+                              <source src="./assets/audio/lasersaber.ogg" typ="audio/ogg">
                         </audio>
                       
                         <h2 class="controlTit">Background audio</h2>
                         <audio controls autoplay loop>
-                              <source src="../../assets/audio/vigil.mp3" type="audio/mpeg">
-                              <source src="../../assets/audio/vigil.ogg" type="audio/ogg">
+                              <source src="./assets/audio/vigil.mp3" type="audio/mpeg">
+                              <source src="./assets/audio/vigil.ogg" type="audio/ogg">
                         </audio>
                   </div>
             </div>
@@ -35,49 +35,49 @@
             <h1>Space Wiki !</h1>
             <h2 class="blink">Click on a planet and enjoy !</h2>
       </div>
-      <div class="arnaque">
+      <div class="howToResponsive">
       <table class="firstDiv">
             <tr>
                   <td class="rotating"> <a (click)="handleClick('Solar')" title="Solar"><img alt="Solar" (mouseover)="playSaber()" 
-                                    src="../../assets/pic/Solar.png"
+                                    src="./assets/pic/Solar.png"
                                     width="350" height="350" class="solar"/></a>
                   </td>
                   <td class="rotating"> <a (click)="handleClick('Mercury')" title="Mercure"><img alt="Mercure" (mouseover)="playSaber()"
-                                    src="../../assets/pic/Mercure.png"
+                                    src="./assets/pic/Mercure.png"
                                     width="100" height="100" class="planets"/></a>
                   </td>
                   <td class="rotating"> <a (click)="handleClick('Venus')" title="Venus"><img alt="Venus" (mouseover)="playSaber()"
-                                    src="../../assets/pic/Venus.png"
+                                    src="./assets/pic/Venus.png"
                                     width="100" height="100" class="planets"/></a>
                   </td>
                   <td class="rotating"> <a (click)="handleClick('Earth')" title="Earth"><img alt="Earth" (mouseover)="playSaber()"
-                                    src="../../assets/pic/Earth.png"
+                                    src="./assets/pic/Earth.png"
                                     width="100" height="100" class="planets"/></a>
                   </td>
                   <td class="rotating"> <a (click)="handleClick('Mars')" title="Mars"><img alt="Mars" (mouseover)="playSaber()"
-                                    src="../../assets/pic/Mars.png"
+                                    src="./assets/pic/Mars.png"
                                     width="100" height="100" class="planets"/></a>
                   </td>
                   <td class="rotating"> <a (click)="handleClick('Jupiter')" title="Jupiter"><img alt="Jupiter" (mouseover)="playSaber()"
-                                    src="../../assets/pic/Jupiter.png"
+                                    src="./assets/pic/Jupiter.png"
                                     width="100" height="100" class="planets"/></a>
                   </td>
                   <td class="rotating"> <a (click)="handleClick('Saturn')" title="Saturne"><img alt="Saturn" (mouseover)="playSaber()"
-                                    src="../../assets/pic/Saturne.png"
+                                    src="./assets/pic/Saturne.png"
                                     width="100" height="100" class="planets"/></a>
                   </td>
                   <td class="rotating"> <a (click)="handleClick('Uranus')" title="Uranus"><img alt="Uranus" (mouseover)="playSaber()"
-                                    src="../../assets/pic/Uranus.jpg"
+                                    src="./assets/pic/Uranus.jpg"
                                     width="100" height="100" class="planets"/></a>
                   </td>
                   <td class="rotating"> <a (click)="handleClick('Neptune')" title="Neptune"><img alt="Neptune" (mouseover)="playSaber()"
-                                    src="../../assets/pic/Neptune.png"
+                                    src="./assets/pic/Neptune.png"
                                     width="100" height="100" class="planets"/></a>
                   </td>
             </tr>
       </table>
       </div>
-      <div class="deuxieme_arnaque">
+      <div class="howToResponsiveTwo">
       <div *ngFor="let item of images">
             <div class="row api">
                   <div class="marginTitleApi col-lg-12 col-md-12 col-sm-12">
@@ -105,7 +105,7 @@
       </div>
       <footer class="page-footer font-small blue pt-4">
             <p class="startrekTit">Do you want startrek ?</p>
-            <a routerLink="/starTrek"> <img class="startrek" src="../../assets/pic/astrowalk.gif"> </a>
+            <a routerLink="/starTrek"> <img class="startrek" src="./assets/pic/astrowalk.gif"> </a>
             <div class="container-fluid text-center text-md-left">
                   <div class="row">
       
